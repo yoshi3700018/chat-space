@@ -40,16 +40,30 @@ Things you may want to cover:
 |image|text||
 |text|text||
 |datetime||
+|user|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :users
 - has_many :chat
 
-## Groupテーブル
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_name|string|null: false|
+|group_id|integer|null: false, foreign_key: true|
+|user|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
+
+### Association
+- belongs_to :chat
+- belongs_to :users
+
+## users_groupテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+
 ### Association
 - belongs_to :chat
 - belongs_to :users
