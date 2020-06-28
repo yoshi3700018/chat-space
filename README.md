@@ -25,30 +25,31 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|nickname|string|null: false|
-### Association
-- has_many :tweets
-- has_many :comments
+|user_id|integer|null: false|
 
-## tweetsテーブル
+### Association
+- has_many :chat
+- has_many :chat_comments
+
+## chatテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
 |text|text||
+|datetime||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- has_many :comments
+- belongs_to :users
+- has_many :chat
 
-## commentsテーブル
+## Groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|text|text|null: false|
+|group_name|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
-|tweet_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :tweet
-- belongs_to :user
-QiitaのDB設計
+- belongs_to :chat
+- belongs_to :users
