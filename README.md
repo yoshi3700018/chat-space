@@ -31,6 +31,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :chats
+- has_many :groups
 
 ## chatsテーブル
 |Column|Type|Options|
@@ -59,4 +60,4 @@ Things you may want to cover:
 
 ### Association
 - belongs_to :user
-- belongs_to :groups
+- belongs_to :group
