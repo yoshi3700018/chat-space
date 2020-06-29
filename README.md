@@ -28,42 +28,35 @@ Things you may want to cover:
 |name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
-|user_id|integer|null: false|
 
 ### Association
-- has_many :chat
-- has_many :chat_comments
+- has_many :chats
 
-## chatテーブル
+## chatsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
 |text|text||
-|datetime||
-|user|string|null: false|
 |user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :users
-- has_many :chat
-
-## groupテーブル
+- belongs_to :groups
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|user|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-
+|name|string|null: false|
 ### Association
-- belongs_to :chat
-- belongs_to :users
+- has_many :chats
+- has_many :users, through: users_groups
+- has_many :users_groups
 
-## users_groupテーブル
+## user_groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :chat
-- belongs_to :users
+- belongs_to :user
+- belongs_to :groups
