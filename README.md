@@ -31,7 +31,7 @@ Things you may want to cover:
 
 ### Association
 - has_many :chats
-- has_many :groups
+- has_many :groups  through: :users_groups
 
 ## chatsテーブル
 |Column|Type|Options|
@@ -52,7 +52,7 @@ Things you may want to cover:
 - has_many :users, through: users_groups
 - has_many :users_groups
 
-## user_groupテーブル
+## users_groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
