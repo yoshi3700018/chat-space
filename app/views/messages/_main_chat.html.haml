@@ -1,4 +1,27 @@
 .chat
-  .chat__header
+  .chat__c-header
+    .chat__c-header__group
+      %h1.g-name テスト
+      %p.u-name name
+    .chat__c-header__edit
+      %p.edit Edit
+    
   .chat__main
-  .chat__footer
+    .chat__main__name
+      %p.m-name masa
+      %p.date 2020/07/01
+    .chat__main__title
+      %h2.title おはよう！
+    .chat__main__name2
+      %p.m-name masa
+      %p.date 2020/07/01
+    .chat__main__message
+      %p.message 今日は夜から雨
+
+  .chat__form
+    .chat__form__message
+      %input.form__text{"placeholder": "type a message", "type": "text"}
+      %label.form__inputImage
+        = icon('far', 'image', class: 'form__icon')
+        %input.Hidden{type: 'file'}
+    %input.Form__submit{type: 'submit', value: 'Send'}  

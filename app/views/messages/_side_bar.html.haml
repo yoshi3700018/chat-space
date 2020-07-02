@@ -1,4 +1,18 @@
 .side-bar
-  .side-bar__header
-    .side-bar__header-list
+  .side-bar__s-header
+    .side-bar__s-header__list
+      .side-bar__s-header__list__name
+        橋本
+      .side-bar__s-header__list__icon  
+        = link_to "#" do
+          = icon('far', 'edit w', class: "list__btn--edit") 
+        = link_to "#" do
+          = icon('fas', 'cog', class: "list__btn--edit")
+
   .side-bar__navi
+    .side-bar__navi__group
+      .side-bar__navi__group__name
+        = link_to "#", class: "link" do
+          テスト
+      .side-bar__navi__group__message
+        テストメッセージです！
