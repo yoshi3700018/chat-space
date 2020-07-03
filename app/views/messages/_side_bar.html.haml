@@ -4,8 +4,8 @@
       .side-bar__s-header__list__name
         = current_user.name
       .side-bar__s-header__list__icon  
-        = link_to "#" do
-          = icon('far', 'edit w', class: "list__btn--edit") 
+        = link_to new_group_path do
+          = icon('far', 'edit', class: "list__btn--edit") 
         = link_to edit_user_path(current_user) do
           = icon('fas', 'cog', class: "list__btn--edit")
 
