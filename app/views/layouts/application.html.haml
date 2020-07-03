@@ -1,3 +1,4 @@
+-# どのビューを表示する時も必ず表示されるようデフォルト設定されているファイル。
 !!!
 %html
   %head
@@ -8,4 +9,6 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    = render 'layouts/notifications' #フラッシュメッセージ表記
+    = yield #他のビューファイルの内容をここに埋め込むための記述。このファイルは別のビューファイルでも必ず表記。yieldの下に他のビューファイルが埋め込まれて表示されていると理解すること。
+    
