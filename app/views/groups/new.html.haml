@@ -1,0 +1,12 @@
+.SettingGroupForm
+  %h1 新規チャットグループ
+  = render partial: 'form', locals: { group: @group }
+
+
+
+
+-# -# form_withの使い方を把握すること
+-# = form_with model: @group, local: true do |f|
+-#   = f.text_field :name, class: "SettingGroupForm__input", placeholder: "グループ名を入力してください"
+-#   = f.collection_check_boxes :user_ids, User.all, :id, :name #ビューにチェックボックスの表示を行うためのヘルパーメソッド。第１引数は送信されるハッシュの「キー」。第２で表示されるためのデータを指定。第３は送信されるハッシュの「バリュー」。第４で上記データのどのカラムを表示させるかを指定。
+-#   = f.submit "Save", class: "SettingGroupForm__button"
