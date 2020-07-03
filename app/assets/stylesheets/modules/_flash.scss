@@ -1,0 +1,14 @@
+// フラッシュメッセージのscss
+.Notification {
+  .notice {
+    background-color: #38AEF0;
+    color: #fff;
+    text-align: center; 
+  } //通知用
+
+  .alert {
+    background-color: #F35500;
+    color: #fff;
+    text-align: center;
+  } //アラート用→設定したらapplication.scssに行って「@import "modules/flash";」と記述、作成したこのフラッシュメッセージの設定ファイルが読み込まれるようにする。
+}
