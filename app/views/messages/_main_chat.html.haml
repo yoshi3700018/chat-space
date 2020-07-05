@@ -1,11 +1,16 @@
-
+-# 問題7. ヘッダーにグループ名とユーザー名が表示されるようにしよう
+-# 問題8. グループ編集ページへのリンクを設置しよう
 .chat
   .chat__c-header
     .chat__c-header__group
-      %h1.g-name テスト
-      %p.u-name name
+      %h1.g-name 
+        = @group.name
+      %p.u-name
+        - @group.users.each do |user|
+          = user.name
     .chat__c-header__edit
-      %p.edit Edit
+      = link_to 'edit',class: "button" do
+        Edit
 
   .chat__main
     = render @messages 

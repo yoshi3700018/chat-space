@@ -1,5 +1,5 @@
 .chat__main__name
-  
+
 .chat__main__title
 .chat__main__name2
   %p.m-name
@@ -9,3 +9,4 @@
 .chat__main__message
   %p.message 
     = message.content
+    = image_tag message.image.url, class: 'Message__image' if message.image.present?
