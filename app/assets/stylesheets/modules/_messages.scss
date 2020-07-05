@@ -150,7 +150,7 @@
     box-sizing: border-bos;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    display: flex;
+    // display: flex;
     &__message{
       width: 100%;
       display: flex;
@@ -175,16 +175,19 @@
         display: none;
       }
     }
-
-    .Form__submit {
-      background-color: #38AEF0;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-    }
+      
+      .Form__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
+  }
+  .Form{
+    display: flex;
   }
 }
   
