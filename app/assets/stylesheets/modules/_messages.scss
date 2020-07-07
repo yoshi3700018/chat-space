@@ -92,16 +92,18 @@
       }
     }
     &__edit {
-      width: 112px;
-      height: 96px;
-      .edit  {
-        height: 40px;
-        line-height: 40px;
-        width: 72px;
-        margin-top: 28px;
-        padding: 0px 20px;
-        font-size: 16px;
-        color: #38aef0;
+    display: block;
+    border: 1px solid #38AEF0;
+    color: #38AEF0;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 40px;
+    margin-top: 28px;
+    padding: 0 20px;
+      .button {
+        text-decoration: none;
+        color: #38AEF0;
+        // display: none;  
       }
     }  
   }
@@ -150,7 +152,7 @@
     box-sizing: border-bos;
     height: 90px;
     padding: 20px 50px 20px 40px;
-    display: flex;
+    // display: flex;
     &__message{
       width: 100%;
       display: flex;
@@ -175,16 +177,19 @@
         display: none;
       }
     }
-
-    .Form__submit {
-      background-color: #38AEF0;
-      border: none;
-      color: #fff;
-      font-size: 16px;
-      height: 50px;
-      margin-left: 15px;
-      padding: 0 30px;
-    }
+      
+      .Form__submit {
+        background-color: #38AEF0;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        height: 50px;
+        margin-left: 15px;
+        padding: 0 30px;
+      }
+  }
+  .Form{
+    display: flex;
   }
 }
   

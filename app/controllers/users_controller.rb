@@ -2,9 +2,11 @@ class UsersController < ApplicationController
   def edit
   end
 
+#  問題 9. グループ編集後のリダイレクト先を変更しよう
   def update
     if current_user.update(user_params)
       redirect_to root_path
+      # redirect_to group_messages_path
     else
       render :edit
     end
