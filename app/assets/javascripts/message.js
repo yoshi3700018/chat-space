@@ -49,12 +49,14 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
       $('.chat__main').append(html);      
       $('form')[0].reset();
       $('.chat__main').animate({ scrollTop: $('.chat__main')[0].scrollHeight});
       $('.Form__submit').prop('disabled', false);
     })
+    .fail(function() {
+      alert("メッセージ送信に失敗しました");
+  });
   });
 });
