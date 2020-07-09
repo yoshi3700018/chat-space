@@ -47,6 +47,7 @@
     background-color: #2f3e51;
     height: calc(100vh - 100px);
     padding: 0 20px;
+    overflow: scroll;
     &__group {
       background-color: #2f3e51;
       height: 91px;
@@ -112,6 +113,7 @@
     background-color: #fafafa;
     height: calc(100% - 100px - 90px);
     margin-left: 40px;
+    overflow: scroll;
     &__name {
       padding: 35px 0px 12px 0;
       display: flex;
